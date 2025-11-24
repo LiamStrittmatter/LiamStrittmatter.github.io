@@ -43,11 +43,13 @@ services:
 
 ## 3. Installing and Configuring the Wireguard Client
 - On the computer you want to connect from, install wireguard (and resolvconf if not already). Example commands for Ubuntu:
+
 ```
 $ sudo apt update && sudo apt upgrade
 $ sudo apt install wireguard resolvconf
 ```
 - The configuration file you need is in the droplet's filesystem at `$wireguard_dir/config/peer1/peer1.conf`. Log into the droplet and copy-paste the contents into your client machine at `/etc/wireguard/wg0.conf`. Here is an example configuration:
+
 ```
 [Interface]
 Address = 10.13.13.2
